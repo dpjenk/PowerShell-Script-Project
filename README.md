@@ -32,6 +32,7 @@ A quick Google search allowed me to decipher the pertinent parameters:
 2) In order to decode this Base 64 script, I used the CyberChef online tool.
 
 3) After decoding from Base64 I noticed numerous NULL bytes. I then applied the “Remove Null Bytes” filter to make the content readable.
+
 Figure 2:
 
 <img width="637" alt="PS2" src="https://github.com/user-attachments/assets/34cceb33-874b-43f1-b066-e9a82c0895fb" />
