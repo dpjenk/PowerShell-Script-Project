@@ -51,6 +51,6 @@ The definition of “DefaultNetworkCredentials” according to Microsoft Learn i
 It seems that the command is simply using the current security context (username, password, and domain) to set the proxy authentication in the script to make the web request to ensure that it is successful.
 
 6) The “$DownloadString” is pointing to the URL:
-"http://98[.]103[.]103[.]170:7443/index.asp" in order to download the malicious payload. 
+"http://98[.]103[.]103[.]170[:]7443/index[.]asp" in order to download the malicious payload. 
 
 
