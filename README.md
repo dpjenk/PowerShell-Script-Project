@@ -26,7 +26,9 @@ Figure 1:
 A quick Google search allowed me to decipher the pertinent parameters:
 
 -Enc is shorthand for -EncodedCommand which allows PowerShell to accept a Base64 encoded command. Apparently, this is used to obfuscate the script making it more difficult to detect and analyze its contents.
+
 -W is shorthand for -WindowStyle and the Hidden value makes the session invisible to the user when the script is executed.
+
 -NonI is shorthand for -Noninteractive meaning the session will not require user input during script execution.
 
 2) In order to decode this Base 64 script, I used the CyberChef online tool.
@@ -46,11 +48,14 @@ Figure 3:
 4) System.Net uses the class “WebClient” to download or upload data to the internet. In this case, files can be downloaded from a URL.
 
 5) This code is used to set the proxy credentials for authentication in the PowerShell script: “Proxy.Credentials =  System.Net.CredentialCache.DefaultNetworkCredentials”
-According to my online research, PowerShell does not use the system’s specified proxy server by default when connecting to external web resources, so they must be specified. 
+6) 
+According to my online research, PowerShell does not use the system’s specified proxy server by default when connecting to external web resources, so they must be specified.
+
 The definition of “DefaultNetworkCredentials” according to Microsoft Learn is “the authentication credentials for the current security context in which the application is running. For a client-side application, these are usually the Windows credentials (username, password, and domain) of the user running the application.”
+
 It seems that the command is simply using the current security context (username, password, and domain) to set the proxy authentication in the script to make the web request to ensure that it is successful.
 
-6) The “$DownloadString” is pointing to the URL:
+8) The “$DownloadString” is pointing to the URL:
 "http://98[.]103[.]103[.]170[:]7443/index[.]asp" in order to download the malicious payload. 
 
 
