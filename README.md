@@ -48,8 +48,8 @@ Figure 3:
 4) System.Net uses the class “WebClient” to download or upload data to the internet. In this case, files can be downloaded from a URL.
 
 5) This code is used to set the proxy credentials for authentication in the PowerShell script: “Proxy.Credentials =  System.Net.CredentialCache.DefaultNetworkCredentials”
-6) 
-According to my online research, PowerShell does not use the system’s specified proxy server by default when connecting to external web resources, so they must be specified.
+   
+6) According to my online research, PowerShell does not use the system’s specified proxy server by default when connecting to external web resources, so they must be specified.
 
 The definition of “DefaultNetworkCredentials” according to Microsoft Learn is “the authentication credentials for the current security context in which the application is running. For a client-side application, these are usually the Windows credentials (username, password, and domain) of the user running the application.”
 
